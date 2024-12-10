@@ -5,7 +5,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 # CSV 파일에서 데이터 로드
-df = pd.read_csv('recipes.csv')
+df = pd.read_csv('../result/second_result/recipes.csv')
 
 # 필요한 열만 선택
 df = df[["title", "source", "category"]]
@@ -23,7 +23,7 @@ inertia = []
 silhouette_avg = []
 
 # 클러스터 수를 2부터 50까지 변경
-for num_clusters in range(25, 54):
+for num_clusters in range(40, 200 , 10):
     print(num_clusters)
     kmeans = KMeans(n_clusters=num_clusters, random_state=42)
     kmeans.fit(X)
