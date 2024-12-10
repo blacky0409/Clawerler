@@ -43,7 +43,8 @@
    python3 data_min/all_recipe/save_scraping_allrecipes_category.py
 3. 레시피를 추천 받습니다.
    ```bash
-   python3 
+   python3 recommendation_algorithm/offering_recipes_allrecipes.py
+   python3 recommendation_algorithm/offering_recipes_10000recipes.py
 5. 대체재료를 찾습니다
    ```bash
    python3 k-means_algorithm/knn.py
